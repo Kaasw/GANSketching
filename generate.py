@@ -16,7 +16,7 @@ def save_image_pytorch(img, name):
         nrow=1,
         padding=0,
         normalize=True,
-        range=(-1, 1),
+        value_range=(-1, 1),
     )
 
 
@@ -89,7 +89,7 @@ if __name__ == '__main__':
     netG = Generator(args.size, 512, 8).to(device)
     checkpoint = torch.load(args.ckpt, map_location='cpu')
 
-    netG.load_state_dict(checkpoint)
+    netG.load_state_dict(checkpoint, strict=False) 
 
     # get mean latent if truncation is applied
     if args.truncation < 1:
