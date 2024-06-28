@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 
 
-def create_lsun(save_dir, lmdb_dir, resolution=256, max_images=None):
+def create_lsun(save_dir, lmdb_dir, resolution=256, max_images=10000):
     print('Loading LSUN dataset from "%s"' % lmdb_dir)
     import lmdb # pip install lmdb # pylint: disable=import-error
     import cv2 # pip install opencv-python

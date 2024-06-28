@@ -6,3 +6,4 @@ python train.py \
 --g_pretrained ./pretrained/stylegan2-church/netG.pth \
 --d_pretrained ./pretrained/stylegan2-church/netD.pth \
 --max_iter 150000 --disable_eval --diffaug_policy translation \
+--no_wandb \
