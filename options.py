@@ -28,7 +28,7 @@ def get_opt():
 
     parser.add_argument("--resume_iter", type=int, default=None, help="which iteration to resume training, train from scratch if None is given")
     parser.add_argument("--max_iter", type=int, default=75001, help="which iteration to stop training")
-    parser.add_argument("--max_epoch", type=int, default=10000, help="max number of training epoch")
+    parser.add_argument("--max_epoch", type=int, default=1000, help="max number of training epoch")
 
     parser.add_argument("--batch", type=int, default=4, help="batch size used for training")
     parser.add_argument("--size", type=int, default=256, help="image size for StyleGAN2")
