@@ -30,6 +30,7 @@ def create_lsun(save_dir, lmdb_dir, resolution=256, max_images=10000):
                     img = Image.fromarray(img, 'RGB')
                     img = img.resize((resolution, resolution), Image.ANTIALIAS)
                     img.save(save_dir + '/{:06d}.png'.format(_idx))
+                    print('Saved %d/%d' % (_idx + 1, max_images))
                 except:
                     print(sys.exc_info()[1])
 
